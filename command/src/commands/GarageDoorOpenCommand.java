@@ -1,0 +1,19 @@
+package commands;
+
+import receivers.GarageDoor;
+
+/**
+ * Created by work on 28/02/15.
+ */
+public class GarageDoorOpenCommand implements Command{
+    GarageDoor garageDoor;
+
+    public GarageDoorOpenCommand(GarageDoor garageDoor){
+        this.garageDoor = garageDoor;
+    }
+
+    @Override
+    public void execute() {
+        garageDoor.up();
+    }
+}
